@@ -13,7 +13,7 @@ def main(argv=None):
         - if false, ng lint should run over the full project
     '''
     os.system("npm install")
-    cmd = ['ng', 'lint'] # If no args, run ng lint over the whole project
+    cmd = ['npm', 'run', 'lint'] # If no args, run ng lint over the whole project
 
     print(cmd)
     os.execvp(cmd[0], cmd)
