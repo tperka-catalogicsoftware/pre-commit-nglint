@@ -12,6 +12,7 @@ def main(argv=None):
     - pass_filenames:
         - if false, ng lint should run over the full project
     '''
+    os.system("npm install")
     cmd = ['ng', 'lint'] # If no args, run ng lint over the whole project
 
     if len(sys.argv) > 1: # sys.argv => command + args; length >= 1
