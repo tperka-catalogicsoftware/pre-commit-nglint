@@ -15,19 +15,6 @@ def main(argv=None):
     os.system("npm install")
     cmd = ['ng', 'lint'] # If no args, run ng lint over the whole project
 
-    if len(sys.argv) > 1: # sys.argv => command + args; length >= 1
-        if '--' in sys.argv:
-            # argv items before '--' are lint options
-            bare_dd_index = sys.argv.index('--')
-            cmd = cmd + sys.argv[1:bare_dd_index]
-
-            # argv items after '--' are filenames (if provided)
-            filenames = sys.argv[bare_dd_index+1:]
-            if len(filenames):
-                cmd += ['--files'] + filenames
-        else:
-            # argv items are the filenames
-            cmd = (cmd + ['--files'] + sys.argv[1:])
     print(cmd)
     os.execvp(cmd[0], cmd)
 
