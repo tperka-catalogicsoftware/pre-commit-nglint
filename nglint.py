@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import os
-import sys
+import subprocess
 
 
 def main(argv=None):
@@ -14,9 +14,9 @@ def main(argv=None):
     '''
     os.system("npm install")
     cmd = ['npm', 'run', 'lint'] # If no args, run ng lint over the whole project
-
     print(cmd)
-    os.execvp(cmd[0], cmd)
+    process = subprocess.run(cmd)
+    return process.returncode
 
 if __name__ == '__main__':
     exit(main())
