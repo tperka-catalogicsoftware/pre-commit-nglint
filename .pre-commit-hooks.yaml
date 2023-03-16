@@ -1,7 +1,7 @@
--   id: nglint
-    name: nglint
+-   id: npmlint
+    name: npmlint
     description: Runs ng lint
-    entry: nglint.py
+    entry: npmlint.sh
     language: script
     # NOTE: we don't need filenames, we simply lint what is defined in project's directory
     pass_filenames: false
