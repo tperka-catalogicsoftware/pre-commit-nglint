@@ -2,7 +2,7 @@
 
 set -e
 
-npm run install     eslint@^8.28.0 \
+npm run install eslint@^8.28.0 \
                     eslint-config-prettier@^8.6.0 \
                     @angular-eslint/builder@14.4.0 \
                     @angular-eslint/eslint-plugin@14.4.0 \
