@@ -13,3 +13,10 @@ npm install eslint@^8.28.0 \
                     @typescript-eslint/parser@5.43.0
 
 npm run lint
+
+EXIT_CODE=$?
+
+git stash
+rm -rf node_modules
+
+exit $EXIT_CODE
